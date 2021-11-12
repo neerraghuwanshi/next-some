@@ -1,0 +1,51 @@
+@import '../../../styles/mixins/flex';
+@import '../../../styles/variables/colors';
+@import '../../../styles/mixins/mediaQueries';
+
+
+.formContainer {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-top: 1px solid $wrapperBorderColor;
+}
+
+.form {
+    padding: 20px;
+    @include flexCenter(row);
+    justify-content: space-between;
+}
+
+.input {
+    height: 35px !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    padding: 0 17.5px !important;
+    border-style: none !important;
+    background-color: $primaryContrastColor !important;
+}
+
+.icon > svg {
+    color: $appColor;
+    margin-left: 30px;
+    width: calc((35px * 3) / 4);
+    height: calc((35px * 3) / 4);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+
+@include screen (iPhone6Plus) {
+    .input {
+        height: 40px !important;
+        padding: 0 20px !important;
+        font-size: 15px !important;
+    }
+
+    .icon > svg {
+        height: calc((40px * 3) / 4);
+        width: calc((40px * 3) / 4);
+    }
+}

@@ -1,0 +1,17 @@
+@import '#styles/variables/colors';
+@import '#styles/mixins/mediaQueries';
+
+
+.container {
+    width: 100%;
+    font-size: 13px;
+    margin-top: -15px;
+    color: $dangerColor;
+}
+
+
+@include screen (iPhone6) {
+    .container {
+        font-size: 14px;
+    }
+}

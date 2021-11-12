@@ -1,0 +1,22 @@
+@import '../../../styles/mixins/flex';
+
+
+.mainContainer {
+    margin-top: -10px;
+}
+
+.rowContainer {
+    width: 100%;
+    @include flexCenter(row);
+}
+
+.searchIcon {
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: -10px;
+}
+
+.searchIcon > svg {
+    width: 23px;
+    height: 23px;
+}

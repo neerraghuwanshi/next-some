@@ -1,0 +1,78 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/mixins/mediaQueries';
+
+
+.form {
+    width: 100%;
+}
+
+.input {
+    font-weight: 400;
+    border-radius: 0;
+    border-style: none;
+    color: $secondaryColor;
+    border-bottom: 2px solid $secondaryColor;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $secondaryContrastColor;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: $secondaryContrastColor;
+    }  
+    &::-ms-input-placeholder {
+        color: $secondaryContrastColor;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active {
+        caret-color: $secondaryColor;
+        -webkit-text-fill-color: $secondaryColor;
+        box-shadow: 0 0 0 30px $primaryColor inset !important;
+        -webkit-box-shadow: 0 0 0 30px $primaryColor inset !important;
+    }
+}
+
+.input, .formButton {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: $primaryColor;
+}
+
+.formButton {
+    font-weight: 600;
+    border-width: 2px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    border-style: solid;
+    color: $appColor;
+    border: 2px solid $appColor;
+    background-color: $primaryColor;
+    transition: background-color, color .1s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: $primaryColor;
+        background-color: $appColor;
+    }
+}
+
+
+@include screen (surfaceDuo) {
+    .input, .formButton {
+        font-size: 18px;
+    }
+}

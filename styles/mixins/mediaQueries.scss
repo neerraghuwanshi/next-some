@@ -1,0 +1,19 @@
+$levels: (
+    iphone4: 280px,
+    iPhone5: 320px,
+    iPhone6: 375px,
+    iPhone6Plus: 410px,
+
+    surfaceDuo: 540px,
+
+    iPad: 768px,
+    iPadPro: 1000px,
+    macBook: 1200px,
+);
+
+
+@mixin screen ($level) {
+    @media only screen and (min-width: map-get($levels, $level)) {
+        @content
+    }
+}
