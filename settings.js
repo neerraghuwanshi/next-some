@@ -1,10 +1,9 @@
-let debug = true
+let debug = process.env.PRODUCTION
 
-let graphqlEndpoint = 'http://localhost:8000/graphql'
+export let gqlEndpoint = 'http://localhost:8000/graphql'
+export let socketEndpoint = 'http://localhost:8000'
 
 if (!debug) {
-    graphqlEndpoint = 'https://so-me.com/graphql'
+    gqlEndpoint = 'https://express-graphql-some.herokuapp.com/graphql'
+    socketEndpoint = 'https://express-graphql-some.herokuapp.com'
 }
-
-
-export const gqlEndpoint = graphqlEndpoint

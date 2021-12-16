@@ -8,9 +8,14 @@ const Component = () => {
     console.log('Navbar')
 
     return (
-        <header>
-            <nav className={styles.mainContainer}>
-                <h2 className={styles.heading}>
+        <header 
+            data-testid='header'>
+            <nav 
+                className={styles.mainContainer}
+                data-testid='headerNav'>
+                <h2 
+                    className={styles.heading}
+                    data-testid='headerNavHeading'>
                     So-Me
                 </h2>
             </nav>

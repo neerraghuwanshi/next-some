@@ -1,12 +1,14 @@
 import openSocket from 'socket.io-client'
 
+import socketEndpoint from '../settings'
+
 
 let io = null
 
 export const socket = {
     init: (token) => {
         io = openSocket(
-            `http://localhost:8000`,
+            socketEndpoint,
             { transports: ['websocket'] }
         )
         io.emit('join', { token })
