@@ -1,6 +1,6 @@
 import openSocket from 'socket.io-client'
 
-import socketEndpoint from '../settings'
+import { socketEndpoint } from '../settings'
 
 
 let io = null
